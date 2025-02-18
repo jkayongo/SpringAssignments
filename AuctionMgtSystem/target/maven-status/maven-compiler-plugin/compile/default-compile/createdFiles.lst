@@ -1,2 +1,11 @@
+auctionmgtsystemworkspace\AuctionMgtSystem\service\UserServiceImpl.class
 auctionmgtsystemworkspace\AuctionMgtSystem\App.class
 auctionmgtsystemworkspace\AuctionMgtSystem\myDb.class
+auctionmgtsystemworkspace\AuctionMgtSystem\DAO\UserDao.class
+auctionmgtsystemworkspace\AuctionMgtSystem\model\Admin.class
+auctionmgtsystemworkspace\AuctionMgtSystem\UserController.class
+auctionmgtsystemworkspace\AuctionMgtSystem\DeveloperModel.class
+auctionmgtsystemworkspace\AuctionMgtSystem\ServicesController.class
+auctionmgtsystemworkspace\AuctionMgtSystem\service\UserService.class
+auctionmgtsystemworkspace\AuctionMgtSystem\DAO\UserDaoImpl.class
+auctionmgtsystemworkspace\AuctionMgtSystem\model\UserModel.class
