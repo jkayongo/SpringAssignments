@@ -67,5 +67,10 @@
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>  <!-- Matches Hibernate Validator 5.x -->
 		</dependency>
+		 <dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.4.3.Final</version>  <!-- Latest stable for Java 8 -->
+		</dependency>
   	</dependencies>
 </project>

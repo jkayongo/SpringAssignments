@@ -6,20 +6,29 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.NotEmpty;
 @Table(name = "patientsDb" , schema = "jkayongodb")
 @Entity
 public class Patient {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "Patient_id",  nullable = false, unique = false)
+	@Column(name = "Patient_id")
 	int patientId;
 	@Column(name = "Patient_name",  nullable = false, unique = false)
+	@NotEmpty(message = "Name must not be blank.")
 	String patientName;
 	@Column(name = "Patient_age",  nullable = false, unique = false)
+	@Min(value = 1 , message = "Age must atleast be 1.")
+	@Max(value = 125, message = "Age cannot exceed 125.")
 	int patientAge;
 	@Column(name = "Diagnosis", nullable = false, unique = false)
+	@NotEmpty(message = "Diagonosis is required.")
 	String diagonosis;
 	@Column(name = "Residence",  nullable = false, unique = false)
+	@NotEmpty(message = "Residence is required.")
 	String residence;
 	
 	public Patient() {
