@@ -26,6 +26,8 @@ public class PatientDaoImpli implements PatientDao {
 		return patients;
 	}
 	public Patient getPatientById(int id) {
+		//the id is used as the primary key to fetch a Patient record from the database.
+
 		Session session = sessionFactory.getCurrentSession();
 		Patient patient = (Patient) session.get(Patient.class, new Integer(id));
 		return patient;
