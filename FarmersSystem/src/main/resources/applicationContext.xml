@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <!-- Bean definitions -->
+ 
+    <!-- A simple bean of type 'Person' -->
+    <bean id="matooke" class="beanregistrationusinganxmlfile.Matooke">
+        
+    </bean>
+    <!-- independent bean -->
+    <bean id="agriculturalOfficer" class="constructorbaseddependencyinjectionwithxmlconfiguration.AgriculturalOfficer ">
+        <constructor-arg value= "1" />
+        <constructor-arg value= "Kalema Moses" />
+    </bean>
+     <!-- Dependent bean -->
+    <bean id="centralAgriculturalOfficer" class="constructorbaseddependencyinjectionwithxmlconfiguration.CentralAgriculturalOfficer">
+        <constructor-arg ref="agriculturalOfficer" />
+    </bean>
+    <!-- independent bean -->
+    <bean id="stock" class="autowiringdependencies.Stock" />
+    <!-- Dependent bean -->
+    <bean id="market" class="autowiringdependencies.Market" autowire="byName" />
+    <!-- independent bean -->
+    <bean id="producer" class="autowiringdependenciesbytype.Producer" />
+    <!-- Dependent bean -->
+    <bean id="vendor" class="autowiringdependenciesbytype.Vendor" autowire="byType" />
+        <!-- independent bean -->
+    <bean id="coffeeFarmer" class="autowiringdependenciesbyconstructor.CoffeeFarmer" />
+    <!-- Dependent bean -->
+    <bean id="coffeeBrewer" class="autowiringdependenciesbyconstructor.CoffeeBrewer" autowire="constructor" />
+    
+
+
+ 
+ 
+</beans>
